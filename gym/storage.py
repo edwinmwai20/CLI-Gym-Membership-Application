@@ -29,9 +29,7 @@ def load_members():
     except:
         return []
 
-
 def save_members(members):
     file = open(MEMBER_FILE, "w")
     json.dump(members, file)
     file.close()
-    
