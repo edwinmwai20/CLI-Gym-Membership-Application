@@ -1,5 +1,3 @@
-# gym/auth.py
-
 from gym.storage import load_users
 from gym.models import Admin, Staff
 
@@ -20,4 +18,5 @@ def login():
 
     print("Login failed.")
     return None
+
 
