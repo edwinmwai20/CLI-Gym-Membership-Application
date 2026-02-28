@@ -34,3 +34,4 @@ def save_members(members):
     file = open(MEMBER_FILE, "w")
     json.dump(members, file)
     file.close()
+    
