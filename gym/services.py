@@ -1,6 +1,6 @@
 # gym/services.py
 
-from gym.storage import load_members, save_members
+from .storage import load_members, save_members
 
 
 def add_member():

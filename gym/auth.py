@@ -1,16 +1,13 @@
-from gym.storage import load_users
-from gym.models import Admin, Staff
-
+from .storage import load_users
+from .models import Admin, Staff
 
 def login():
     users = load_users()
-
     username = input("Username: ")
     password = input("Password: ")
 
     for user in users:
         if user["username"] == username and user["password"] == password:
-
             if user["role"] == "admin":
                 return Admin(username, password)
             else:
@@ -18,5 +15,3 @@ def login():
 
     print("Login failed.")
     return None
-
-
