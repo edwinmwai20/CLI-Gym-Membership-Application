@@ -1,5 +1,5 @@
 from gym.auth import login
-from gym.services import add_member, view_members, deactivate_member, delete_member
+from gym.services import add_member, view_members, deactivate_member, delete_member,update_member
 
 
 def admin_menu():
@@ -8,7 +8,8 @@ def admin_menu():
         print("2. View Members")
         print("3. Deactivate Member")
         print("4. Delete Member")
-        print("5. Logout")
+        print("5. update Member")
+        print("6. Logout")
 
         choice = input("Choose: ")
 
@@ -21,6 +22,8 @@ def admin_menu():
         elif choice == "4":
             delete_member()
         elif choice == "5":
+            update_member()
+        elif choice == "6":
             break
 
 

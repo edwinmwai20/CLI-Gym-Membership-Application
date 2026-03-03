@@ -54,9 +54,9 @@ def update_member():
             new_plan = input("New plan (press Enter to keep current): ")
 
             if new_name:
-                member['name'] = new_name
+                m['name'] = new_name
             if new_plan:
-                member['plan'] = new_plan
+                m['plan'] = new_plan
 
             save_members(members)
 
@@ -66,12 +66,12 @@ def update_member():
 
 
 def delete_member():
-    members = load_members
+    members = load_members()
     member_name = input("Enter member name: ")
     for m in members:
         if m["name"] == member_name:
-            member.remove(m)
-            save_members(member)
+            members.remove(m)
+            save_members(members)
             print(f"{member_name} has been deleted")
 
             return
