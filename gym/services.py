@@ -33,7 +33,6 @@ def view_members():
 
 def deactivate_member():
     members = load_members()
-
     member_id = int(input("Member ID: "))
 
     for m in members:
@@ -42,3 +41,37 @@ def deactivate_member():
 
     save_members(members)
     print("Member deactivated.")
+
+
+
+def update_member():
+    members = load_members()
+    member_name = input("Enter member name: ")
+    for m in members:
+        if m['name'] == member_name:
+            print(f"\nCurrent details: {m}")
+            new_name = input("New name (press Enter to keep current): ")
+            new_plan = input("New plan (press Enter to keep current): ")
+
+            if new_name:
+                member['name'] = new_name
+            if new_plan:
+                member['plan'] = new_plan
+
+            save_members(members)
+
+            print("Member updated successfully.")
+            return
+
+
+
+def delete_member():
+    members = load_members
+    member_name = input("Enter member name: ")
+    for m in members:
+        if m["name"] == member_name:
+            member.remove(m)
+            save_members(member)
+            print(f"{member_name} has been deleted")
+
+            return
